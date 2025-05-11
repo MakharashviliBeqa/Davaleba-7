@@ -5,8 +5,40 @@
     height: 100vh;
 }
 
-    .left-img, .right-img {
+.left-img, .right-img {
     width: 120px;
     height: 120px;
     margin: 20px;
+}
+
+.left-img, .right-img {
+    width: 120px;
+    height: 120px;
+    transition: transform 0.5s ease;
+}
+
+.container:hover .left-img {
+    animation: slideLeft 0.5s forwards;
+}
+
+.container:hover .right-img {
+    animation: slideRight 0.5s forwards;
+}
+
+@keyframes slideLeft {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-40px);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(40px);
+    }
 }
